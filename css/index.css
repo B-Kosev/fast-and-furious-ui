@@ -1,0 +1,90 @@
+:root {
+	--body-color: #e4e9f7;
+	--header-color: #fff;
+	--primary-color: #695cfe;
+	--primary-color-dark: #5245da;
+	--toggle-color: #ddd;
+	--text-color: #707070;
+}
+
+/* ======== MAIN ======== */
+
+* {
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+}
+
+body {
+	/* background-color: var(--body-color); */
+	background: linear-gradient(90deg, #e4e9f7, #e2e9f8, #e1eafa, #dfeafb, #dceafc, #daebfd, #d8ebfe, #d5ecff);
+}
+
+/* ======== HEADER ======== */
+
+.logo {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.logo img {
+	height: 50%;
+	width: 50%;
+}
+
+/* ======== CARDS ======== */
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 3%;
+}
+
+.card {
+	margin: 1rem;
+	text-align: center;
+	font-size: 1.2rem;
+	border-radius: 20px;
+	padding: 20px;
+	background-color: var(--header-color);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+	transition: background-color, transform 0.5s ease;
+	cursor: pointer;
+}
+
+.card figcaption {
+	color: var(--text-color);
+}
+
+.card:hover {
+	transform: scale(1.1);
+	background-color: var(--primary-color);
+}
+
+.card:hover figcaption {
+	color: var(--header-color);
+}
+
+.fig img {
+	height: 250px;
+	width: 250px;
+}
+
+/* ======== RESPONSIVENESS ======== */
+
+@media (max-width: 740px) {
+	.logo img {
+		width: 350px;
+		height: 90px;
+	}
+}
