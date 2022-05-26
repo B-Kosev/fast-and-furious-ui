@@ -3,10 +3,13 @@
 	<head>
 		<title>Fast And Furious</title>
 		<link href="./css/test.css" rel="stylesheet" />
+		<link href="./css/nav.css" rel="stylesheet" />
 		<script src="https://kit.fontawesome.com/0138e10fbd.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<header class="header">
+			<button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+			<img class="logo" src="./images/logo.png" width="194" height="50" />
 			<nav>
 				<ul class="nav">
 					<li><a href="index.html">Начало</a></li>
@@ -15,14 +18,42 @@
 					<li><a href="#">Обратна връзка</a></li>
 				</ul>
 			</nav>
-			<button class="hamburger"><i class="fa-solid fa-bars"></i></button>
-			<!-- <ul class="auth">
-				<li><a href="login.html" id="login-button">Sign in</a></li>
-				<li><a href="register.html" id="register-button">Sign up</a></li>
-				<li><span id="greeting"></span></li>
-				<li><a id="logout-button">Log out</a></li>
-			</ul> -->
 		</header>
+
+		<section class="content">
+			<section class="questions">
+				<ul>
+					<li><button id="q1" class="btn question selected" type="button">1</button></li>
+					<li><button id="q2" class="btn question" type="button">2</button></li>
+					<li><button id="q3" class="btn question key" type="button">3</button></li>
+				</ul>
+			</section>
+			<section class="question">
+				<section class="question-meta">
+					<span class="time-remaining"><i class="fa-solid fa-hourglass-end"></i> 38:45</span>
+					<span class="question-number">Въпрос: 1</span>
+					<span class="question-points">Точки: 3</span>
+					<span class="question-correct">Верни: 1</span>
+					<button id="q3" class="btn question key" type="button"><i class="fa-regular fa-lightbulb"></i></button>
+				</section>
+				<h2 class="question-title">Тошко измамник ли е?</h2>
+				<img src="./images/logo.png" alt="" class="question-img" />
+				<section class="answers">
+					<ul>
+						<li><button id="a1" class="btn answer" type="button">Да</button></li>
+						<li><button id="a2" class="btn answer" type="button">Много ясно</button></li>
+						<li><button id="a3" class="btn answer key" type="button">Абсолютно</button></li>
+						<li><button id="a3" class="btn answer key" type="button">Виждал съм ама няма</button></li>
+					</ul>
+				</section>
+			</section>
+			<section class="navigate">
+				<ul>
+					<button class="arrow"><i class="fa-solid fa-arrow-left"></i></button>
+					<button class="arrow"><i class="fa-solid fa-arrow-right"></i></button>
+				</ul>
+			</section>
+		</section>
 
 		<script src="./js/test.js"></script>
 	</body>

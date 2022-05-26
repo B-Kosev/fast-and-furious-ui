@@ -1,0 +1,77 @@
+:root {
+	--primary-color: #7985fa;
+	--background-color: #f0edff;
+	--section-color: rgba(249, 248, 255, 0.6);
+	--text-color: #464555;
+	--text-color-light: #f9f8ff;
+	--hint-background: #f9f871;
+}
+
+/* ================= NAVIGATION ================= */
+
+.logo {
+	float: right;
+	margin-right: calc(100vw / 2 - 194px / 2);
+}
+
+.hamburger,
+.arrow {
+	display: inline;
+	width: 55px;
+	height: 55px;
+	font-size: 40px;
+	text-align: center;
+	cursor: pointer;
+	appearance: none;
+	background: none;
+	outline: none;
+	border: none;
+	transition: all ease-in-out 0.2s;
+}
+
+.hamburger.active {
+	transform: rotate(90deg);
+	transition: all ease-in-out 0.2s;
+}
+
+.nav {
+	display: none;
+	list-style: none;
+	font-size: 1.2rem;
+	padding: 0;
+	/* transform: translateY(-3000px); */
+	transition: all 0.5s ease;
+	border-bottom: 1px solid black;
+}
+
+.nav.active {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-bottom: 15px;
+	/* transform: translateY(0); */
+}
+
+.nav li {
+	display: inline-block;
+	padding: 0px 20px;
+	text-transform: uppercase;
+}
+
+.nav a {
+	display: block;
+	width: 300px;
+	padding: 0.5rem;
+	color: var(--text-color);
+	border-radius: 6px;
+	transition: background-color, transform 0.5s ease;
+	text-align: center;
+}
+
+.nav li a:hover {
+	transform: scale(1.1);
+	color: var(--text-color-light);
+	background-color: var(--primary-color);
+}
