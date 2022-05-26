@@ -87,4 +87,9 @@ body {
 		width: 350px;
 		height: 90px;
 	}
+
+	.fig img {
+		width: 150px;
+		height: 150px;
+	}
 }
