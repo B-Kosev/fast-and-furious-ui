@@ -1,10 +1,14 @@
 :root {
 	--primary-color: #7985fa;
+	--primary-color-dark: #5245da;
 	--background-color: #f0edff;
 	--section-color: rgba(249, 248, 255, 0.5);
 	--text-color: #464555;
 	--text-color-light: #f9f8ff;
 	--hint-background: #f9f871;
+	--border-color: #e4e9f7;
+	--delete-color: rgb(231, 85, 85);
+	--delete-color-dark: red;
 }
 
 /* ======== MAIN ======== */

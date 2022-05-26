@@ -4,7 +4,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--header-color);
+	background-color: var(--background-color);
 	margin: 7% 30% 5% 30%;
 	padding: 2% 0 2% 0;
 	min-width: 280px;
@@ -27,20 +27,18 @@ label,
 .field,
 .btn {
 	margin: 5px 0 0 0;
-	border: groove var(--body-color);
+	border: groove var(--border-color);
 }
 
 .btn {
 	outline: none;
 	margin: 10px 0 20px 0;
 	height: 40px;
-	/* width: 300px; */
 	width: 50%;
 	min-width: 170px;
 	text-align: center;
 	border-radius: 20px;
-	/* border: 2px solid var(--primary-color); */
-	color: var(--header-color);
+	color: var(--text-color-light);
 	font-size: 1.1rem;
 	font-weight: bold;
 	cursor: pointer;
@@ -49,20 +47,15 @@ label,
 }
 
 .btn:hover {
-	/* transform: scale(1.1); */
+	border: solid black;
 	background-color: var(--primary-color-dark);
 }
 
 label {
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	text-transform: uppercase;
 	text-align: center;
-}
-
-.submit:hover {
-	border-style: solid;
-	color: var(--header-color);
-	background-color: var(--primary-color);
+	margin-bottom: 10px;
 }
 
 .errorMsg {

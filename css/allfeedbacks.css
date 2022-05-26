@@ -1,25 +1,66 @@
-table {
-	width: 80%;
-	margin: 5% 10% 0 10%;
-	text-align: center;
-	border: 1px solid black;
+.table-title {
+	font-size: 2.2em;
+	margin: 2% 10% 0 10%;
+	color: var(--text-color);
 }
 
-td,
-th {
-	border: 1px solid black;
+section {
+	margin-top: 3%;
+}
+
+table {
+	width: 80%;
+	margin: 1% 10% 0 10%;
+	text-align: center;
+	border-collapse: collapse;
+	font-size: 1.1em;
+
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+}
+
+th,
+td {
+	padding: 10px;
+}
+
+thead {
+	background-color: var(--primary-color-dark);
+	color: var(--text-color-light);
+	height: 55px;
+	font-size: 1.2em;
+}
+
+tbody tr {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	border-bottom: 1.5px solid grey;
+}
+
+tbody tr:nth-of-type(odd) {
+	background-color: white;
 }
 
 a {
 	display: block;
 	margin: 4px;
 	padding: 0.5rem;
-	background-color: var(--header-color);
-	color: var(--text-color);
 	border-radius: 6px;
 	transition: background-color, transform 0.5s ease;
 	text-align: center;
-	color: var(--header-color);
+	color: var(--text-color-light);
 	background-color: var(--primary-color);
 	white-space: nowrap;
+	width: 130px;
+}
+
+a:hover {
+	background-color: var(--primary-color-dark);
+}
+
+.delete-btn {
+	background-color: var(--delete-color);
+}
+
+.delete-btn:hover {
+	background-color: var(--delete-color-dark);
 }

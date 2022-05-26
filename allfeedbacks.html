@@ -4,32 +4,62 @@
 		<title>Fast and Furious</title>
 		<link href="./css/index.css" rel="stylesheet" />
 		<link href="./css/allfeedbacks.css" rel="stylesheet" />
+		<link href="./css/nav.css" rel="stylesheet" />
 	</head>
 	<body>
+		<header class="header">
+			<button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+			<img class="logo" src="./images/logo.png" width="194" height="50" />
+			<nav>
+				<ul class="nav">
+					<li><a href="index.html">Начало</a></li>
+					<li><a href="test.html">Тестове</a></li>
+					<li><a href="theory.html">Теория</a></li>
+					<li><a href="#">Обратна връзка</a></li>
+				</ul>
+			</nav>
+		</header>
 		<section>
+			<h1 class="table-title">Обратна връзка получена от потребителите</h1>
 			<table>
-				<tr>
-					<th>Категория</th>
-					<th>Вид</th>
-					<th>Изпратил</th>
-					<th></th>
-					<th></th>
-				</tr>
-				<tr>
-					<td>Грешка в тест</td>
-					<td>Грешен отговор</td>
-					<td>Димитър Георгиев</td>
-					<td><a href="./index.html">Преглед</a></td>
-					<td><a href="./index.html">Изтриване</a></td>
-				</tr>
-				<tr>
-					<td>Грешка в теорията</td>
-					<td>Грешно изображение</td>
-					<td>Петър Петров</td>
-					<td><a href="./index.html">Преглед</a></td>
-					<td><a href="./index.html">Изтриване</a></td>
-				</tr>
+				<thead>
+					<tr>
+						<th>Категория</th>
+						<th>Вид</th>
+						<th>Изпратил</th>
+						<th>Идентификатор</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Грешка в тест</td>
+						<td>Грешен отговор</td>
+						<td>Петя Иванова</td>
+						<td>q-11</td>
+						<td><a href="./index.html">Преглед</a></td>
+						<td><a href="./index.html" class="delete-btn">Изтриване</a></td>
+					</tr>
+					<tr>
+						<td>Грешка в тест</td>
+						<td>Грешен отговор</td>
+						<td>Димитър Георгиев</td>
+						<td>q-32</td>
+						<td><a href="./index.html">Преглед</a></td>
+						<td><a href="./index.html" class="delete-btn">Изтриване</a></td>
+					</tr>
+					<tr>
+						<td>Грешка в теорията</td>
+						<td>Грешно изображение</td>
+						<td>Петър Петров</td>
+						<td>th-znaci</td>
+						<td><a href="./index.html">Преглед</a></td>
+						<td><a href="./index.html" class="delete-btn">Изтриване</a></td>
+					</tr>
+				</tbody>
 			</table>
 		</section>
 	</body>
+	<script src="https://kit.fontawesome.com/0138e10fbd.js" crossorigin="anonymous"></script>
 </html>

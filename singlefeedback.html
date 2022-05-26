@@ -3,20 +3,52 @@
 	<head>
 		<title>Fast and Furious</title>
 		<link href="./css/index.css" rel="stylesheet" />
-		<!-- <link href="./css/allfeedbacks.css" rel="stylesheet" /> -->
+		<link href="./css/singlefeedback.css" rel="stylesheet" />
+		<link href="./css/nav.css" rel="stylesheet" />
 	</head>
 	<body>
-        <section>
-            <ul>
-                <label>Преглед на обратна връзка</label>
-				<span class="field-name">Изпратил</span>
-				<span class="field-name">Имейл</span>
-				<span class="field-name">Категория</span>
-				<span class="field-name">Вид</span>
-				<span class="field-name">Подробно описание</span>
-				<p>Отговорът на въпроса е грешен!</p>
-				<input class="btn" type="submit" value="Изпрати" name="login" />
-            </ul>
-        </section>
-    </body>
+		<header class="header">
+			<button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+			<img class="logo" src="./images/logo.png" width="194" height="50" />
+			<nav>
+				<ul class="nav">
+					<li><a href="index.html">Начало</a></li>
+					<li><a href="test.html">Тестове</a></li>
+					<li><a href="theory.html">Теория</a></li>
+					<li><a href="#">Обратна връзка</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="feedback-section">
+			<ul>
+				<h1 class="feedback-title">Преглед на обратна връзка</h1>
+				<section>
+					<label>Изпратил:</label>
+					<span>Димитър Георгиев</span>
+				</section>
+				<section>
+					<label>Имейл на изпратилия:</label>
+					<span>DimitarGeorgiev@example.com</span>
+				</section>
+				<section>
+					<label>Категория:</label>
+					<span>Грешка в тест</span>
+				</section>
+				<section>
+					<label>Вид:</label>
+					<span>Грешен отговор</span>
+				</section>
+				<section>
+					<label>Подробно описание на проблема:</label>
+					<p>Отговорът на въпроса е грешен!</p>
+				</section>
+				<a href="./index.html">Линк към въпроса/теоретичния материал</a>
+				<section class="btn-section">
+					<a href="./allfeedbacks.html" class="btn">Назад</a>
+					<a href="#" class="delete-btn">Изтриване</a>
+				</section>
+			</ul>
+		</section>
+	</body>
+	<script src="https://kit.fontawesome.com/0138e10fbd.js" crossorigin="anonymous"></script>
 </html>
