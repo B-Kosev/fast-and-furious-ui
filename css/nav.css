@@ -9,6 +9,10 @@
 
 /* ================= NAVIGATION ================= */
 
+header {
+	margin: 10px 0;
+}
+
 .logo {
 	float: right;
 	margin-right: calc(100vw / 2 - 194px / 2);

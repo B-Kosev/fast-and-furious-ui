@@ -9,13 +9,13 @@
 	<body>
 		<header class="header">
 			<button class="hamburger"><i class="fa-solid fa-bars"></i></button>
-			<img class="logo" src="./images/logo.png" width="194" height="50" />
+			<a href="index.html"><img class="logo" src="./images/logo.png" width="194" height="50" /></a>
 			<nav>
 				<ul class="nav">
 					<li><a href="index.html">Начало</a></li>
 					<li><a href="test.html">Тестове</a></li>
 					<li><a href="theory.html">Теория</a></li>
-					<li><a href="#">Обратна връзка</a></li>
+					<li><a href="allfeedbacks.html">Обратна връзка</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -25,7 +25,8 @@
 				<ul>
 					<li><button id="q1" class="btn question selected" type="button">1</button></li>
 					<li><button id="q2" class="btn question" type="button">2</button></li>
-					<li><button id="q3" class="btn question key" type="button">3</button></li>
+					<li><button id="q3" class="btn question" type="button">3</button></li>
+					<li><button id="complete" class="btn complete" type="button">Приключване на опита</button></li>
 				</ul>
 			</section>
 			<section class="question">
@@ -34,7 +35,7 @@
 					<span class="question-number">Въпрос: 1</span>
 					<span class="question-points">Точки: 3</span>
 					<span class="question-correct">Верни: 1</span>
-					<button id="q3" class="btn question key" type="button"><i class="fa-regular fa-lightbulb"></i></button>
+					<button class="btn hint" type="button"><i class="fa-regular fa-lightbulb"></i></button>
 				</section>
 				<h2 class="question-title">Тошко измамник ли е?</h2>
 				<img src="./images/logo.png" alt="" class="question-img" />
@@ -42,19 +43,20 @@
 					<ul>
 						<li><button id="a1" class="btn answer" type="button">Да</button></li>
 						<li><button id="a2" class="btn answer" type="button">Много ясно</button></li>
-						<li><button id="a3" class="btn answer key" type="button">Абсолютно</button></li>
-						<li><button id="a3" class="btn answer key" type="button">Виждал съм ама няма</button></li>
+						<li><button id="a3" class="btn answer" type="button">Абсолютно</button></li>
+						<li><button id="a4" class="btn answer" type="button">Виждал съм ама няма</button></li>
 					</ul>
 				</section>
 			</section>
 			<section class="navigate">
 				<ul>
-					<button class="arrow"><i class="fa-solid fa-arrow-left"></i></button>
-					<button class="arrow"><i class="fa-solid fa-arrow-right"></i></button>
+					<button class="arrow left"><i class="fa-solid fa-arrow-left"></i></button>
+					<button class="arrow right"><i class="fa-solid fa-arrow-right"></i></button>
 				</ul>
 			</section>
 		</section>
 
 		<script src="./js/test.js"></script>
+		<script src="./js/nav.js"></script>
 	</body>
 </html>

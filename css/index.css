@@ -20,6 +20,15 @@
 	font-family: "Poppins", sans-serif;
 }
 
+html,
+body {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	min-height: 100%;
+}
+
 body {
 	background-image: linear-gradient(
 		to right bottom,
@@ -40,13 +49,12 @@ body {
 
 /* ======== HEADER ======== */
 
-.logo {
-	display: flex;
-	justify-content: center;
-	margin-top: 20px;
+header {
+	margin: 10px 0;
+	text-align: center;
 }
 
-.logo img {
+.logo {
 	height: 50%;
 	width: 50%;
 }
@@ -93,7 +101,7 @@ body {
 /* ======== RESPONSIVENESS ======== */
 
 @media (max-width: 740px) {
-	.logo img {
+	.logo {
 		width: 350px;
 		height: 90px;
 	}
