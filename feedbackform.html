@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fast and Furious</title>
+		<link href="./css/index.css" rel="stylesheet" />
+		<link href="./css/form.css" rel="stylesheet" />
+	</head>
+	<body>
+		<section>
+			<form class="form" id="feedback-form">
+				<label>Обратна връзка</label>
+				<span class="field-name">Имена</span>
+				<input class="field" type="text" placeholder="Въведете вашите имена" name="name" id="name" />
+				<span class="errorMsg" id="name-err"></span>
+				<span class="field-name">Имейл</span>
+				<input class="field" type="email" placeholder="Въведете вашия имейл" name="email" id="email" />
+				<span class="errorMsg" id="email-err"></span>
+				<span class="field-name">Категория</span>
+				<select class="field" name="category" id="category">
+					<option>Грешка в тест</option>
+					<option>Грешка в теорията</option>
+				</select>
+				<span class="field-name">Вид</span>
+				<select class="field" name="category" id="type">
+					<option>Грешен отговор</option>
+					<option>Грешно изображение</option>
+				</select>
+				<span class="field-name">Подробно описание</span>
+				<textarea class="field" placeholder="Опишете подробно проблема" name="text" id="text"></textarea>
+				<span class="errorMsg" id="text-err"></span>
+				<input class="btn" type="submit" value="Изпрати" name="login" />
+			</form>
+		</section>
+	</body>
+	<script src="./js/feedbackform.js"></script>
+</html>
