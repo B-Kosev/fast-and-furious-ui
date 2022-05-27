@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fast and Furious</title>
+		<meta charset="UTF-8">
+		<link href="./css/index.css" rel="stylesheet" />
+		<link href="./css/allfeedbacks.css" rel="stylesheet" />
+		<link href="./css/nav.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header class="header">
+			<button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+			<a href="index.html"><img class="logo" src="./images/logo.png" width="194" height="50" /></a>
+			<nav>
+				<ul class="nav">
+					<li><a href="index.html">Начало</a></li>
+					<li><a href="test.html">Тестове</a></li>
+					<li><a href="theory.html">Теория</a></li>
+					<li><a href="allfeedbacks.html">Обратна връзка</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section>
+			<h1 class="table-title">Редактиране на въпрос</h1>
+			<table id="table">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Тема</th>
+						<th>Точки на въпроса</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="first-feedback">
+						<td>1</td>
+						<td>Основни понятия</td>
+						<td>3</td>
+                        <td><a href="#" class="btn">Преглед</a></td>
+						<td><a class="delete-btn" id="del-1">Изтриване</a></td>
+					</tr>
+					<tr id="second-feedback">
+						<td>2</td>
+						<td>Маневри</td>
+						<td>2</td>
+						<td><a href="./editQuestionForm.html" class="btn">Преглед</a></td>
+						<td><a class="delete-btn" id="del-2">Изтриване</a></td>
+					</tr>
+					<tr id="third-feedback">
+						<td>3</td>
+						<td>Маневри</td>
+						<td>3</td>
+						<td><a href="#" class="btn">Преглед</a></td>
+						<td><a class="delete-btn" id="del-3">Изтриване</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</body>
+	<script src="https://kit.fontawesome.com/0138e10fbd.js" crossorigin="anonymous"></script>
+	<script src="./js/allfeedbacks.js"></script>
+	<script src="./js/nav.js"></script>
+</html>

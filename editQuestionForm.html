@@ -24,11 +24,12 @@
 
 		<section>
 			<form class="form" id="edit-question-form">
-				<label>Редактиране на въпрос</label>
-				<span class="field-name">ID на въпроса</span>
-				<input class="field" type="text" placeholder="Въведете ID-то на въпроса " name="questionID" id="questionID" />
-				<span class="errorMsg" id="questionID-err"></span>
+                <label><b>Редактиране на въпрос</b></label>
+                <label>Снимка на въпроса</label>
+                <img src="./images/books.png" />
 
+				
+				
 				
 				<span class="field-name">Вид</span>
 				<select class="field" name="category" id="type" onchange="DisplayCorrectField(event)">
@@ -37,17 +38,34 @@
 				</select>
 
                 <span class="field-name wrong-image">Прикачете вашия файл</span>
-                <input class="wrong-image" type="file" id="myFile" name="filename">
+                <input class=" wrong-image" type="file" id="myFile" name="filename"></input>
                 <span class="errorMsg wrong-image" id="fileUpload-err"></span>
 
-                <span class="field-name wrong-question">Отговор номер:</span>
-				<input class="field wrong-question" type="text" placeholder="Въведете номера на отговора, който е объркан" name="questinNumber" id="questinNumber" />
-				<span class="errorMsg wrong-question" id="questinNumber-err"></span>
+                <span class="field-name wrong-question">Отговор 1</span>
+                <input class="field wrong-question" type="text" id="question1" name="question1"  value=" Ограничето е до 50">
+                <span class="errorMsg wrong-queiston" id="question1-err"></span>
 
+                <span class="field-name wrong-question">Отговор 2</span>
+                <input class="field wrong-question" type="text" id="question2" name="question2" value=" Ограничението е  до 30">
+                <span class="errorMsg wrong-queiston" id="question2-err"></span>
 
-				<span class="field-name wrong-question">Нов текст на отговора</span>
-				<textarea class="field wrong-question" placeholder="Въведете новия текст на отговора" name="text" id="text"></textarea>
-				<span class="errorMsg wrong-question" id="text-err"></span>
+                <span class="field-name wrong-question">Отговор 3</span>
+                <input class="field wrong-question" type="text" id="question3" name="question3" value=" Ограничето е до 40">
+                <span class="errorMsg wrong-queiston" id="question3-err"></span>
+
+                <span class="field-name wrong-question">Отговор 4</span>
+                <input class="field wrong-question" type="text" id="question4" name="question4"  value=" Ограничето е до 60">
+                <span class="errorMsg wrong-queiston" id="question4-err"></span>
+
+                <span class="field-name wrong-question">Брой точки</span>
+                <input class="field wrong-question" type="text" id="points" name="points"  value="3">
+                <span class="errorMsg wrong-queiston" id="points-err"></span>
+
+                <span class="field-name wrong-question">Верен отговор №</span>
+                <input class="field wrong-question" type="text" id="rightanswer" name="rightanswer"  value="4">
+                <span class="errorMsg wrong-queiston" id="rightanswer-err"></span>
+
+                
                 <span class="successMsg " id="success-msg"></span>
 				<input class="btn" type="submit" value="Редактирай" name="editForm" />
 			</form>
