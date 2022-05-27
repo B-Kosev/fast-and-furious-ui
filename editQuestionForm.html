@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fast and Furious</title>
+		<meta charset="UTF-8">
+		<link href="./css/index.css" rel="stylesheet" />
+		<link href="./css/form.css" rel="stylesheet" />
+		<link href="./css/nav.css" rel="stylesheet" />
+        <link href="./css/editQuestionForm.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header class="header">
+			<button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+			<a href="index.html"><img class="logo" src="./images/logo.png" width="194" height="50" /></a>
+			<nav>
+				<ul class="nav">
+					<li><a href="index.html">Начало</a></li>
+					<li><a href="test.html">Тестове</a></li>
+					<li><a href="theory.html">Теория</a></li>
+					<li><a href="allfeedbacks.html">Обратна връзка</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section>
+			<form class="form" id="edit-question-form">
+				<label>Редактиране на въпрос</label>
+				<span class="field-name">ID на въпроса</span>
+				<input class="field" type="text" placeholder="Въведете ID-то на въпроса " name="questionID" id="questionID" />
+				<span class="errorMsg" id="questionID-err"></span>
+
+				
+				<span class="field-name">Вид</span>
+				<select class="field" name="category" id="type" onchange="DisplayCorrectField(event)">
+					<option>Грешен отговор</option>
+					<option>Грешно изображение</option>
+				</select>
+
+                <span class="field-name wrong-image">Прикачете вашия файл</span>
+                <input class="wrong-image" type="file" id="myFile" name="filename">
+                <span class="errorMsg wrong-image" id="fileUpload-err"></span>
+
+                <span class="field-name wrong-question">Отговор номер:</span>
+				<input class="field wrong-question" type="text" placeholder="Въведете номера на отговора, който е объркан" name="questinNumber" id="questinNumber" />
+				<span class="errorMsg wrong-question" id="questinNumber-err"></span>
+
+
+				<span class="field-name wrong-question">Нов текст на отговора</span>
+				<textarea class="field wrong-question" placeholder="Въведете новия текст на отговора" name="text" id="text"></textarea>
+				<span class="errorMsg wrong-question" id="text-err"></span>
+                <span class="successMsg " id="success-msg"></span>
+				<input class="btn" type="submit" value="Редактирай" name="editForm" />
+			</form>
+		</section>
+	</body>
+	<script src="./js/editQuestionForm.js"></script>
+	<script src="https://kit.fontawesome.com/0138e10fbd.js" crossorigin="anonymous"></script>
+	<script src="./js/nav.js"></script>
+</html>
