@@ -1,3 +1,7 @@
+header {
+	text-align: left;
+}
+
 .feedback-section {
 	display: flex;
 	flex-wrap: wrap;
@@ -6,7 +10,7 @@
 	align-items: center;
 	color: var(--text-color);
 	background-color: var(--background-color);
-	margin: 7% 25% 5% 25%;
+	margin: 0 25% 5% 25%;
 	padding: 2% 0 2% 0;
 	min-width: 350px;
 	width: 50%;
@@ -22,7 +26,8 @@
 }
 
 section,
-a {
+.link,
+.btn {
 	margin: 5px 0 0 0;
 }
 
@@ -31,14 +36,15 @@ label {
 }
 
 span,
-a,
-p {
+p,
+.link,
+.btn {
 	font-weight: bold;
 	font-size: 1.1em;
 }
 
 p {
-	margin: 0;
+	margin: 0 0 5px 0;
 }
 
 .btn-section {
@@ -64,10 +70,10 @@ p {
 	background-color: var(--primary-color-dark);
 }
 
-.delete-btn {
+#delete-btn {
 	background-color: var(--delete-color);
 }
 
-.delete-btn:hover {
+#delete-btn:hover {
 	background-color: var(--delete-color-dark);
 }

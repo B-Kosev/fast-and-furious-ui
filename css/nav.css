@@ -79,3 +79,8 @@ header {
 	color: var(--text-color-light);
 	background-color: var(--primary-color);
 }
+
+.logo {
+	width: 194px;
+	height: 50px;
+}

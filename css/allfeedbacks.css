@@ -1,6 +1,10 @@
+header {
+	text-align: left;
+}
+
 .table-title {
 	font-size: 2.2em;
-	margin: 2% 10% 0 10%;
+	margin: 0 10% 0 10%;
 	color: var(--text-color);
 }
 
@@ -40,7 +44,8 @@ tbody tr:nth-of-type(odd) {
 	background-color: white;
 }
 
-a {
+.btn,
+.delete-btn {
 	display: block;
 	margin: 4px;
 	padding: 0.5rem;
@@ -53,7 +58,7 @@ a {
 	width: 130px;
 }
 
-a:hover {
+.btn:hover {
 	background-color: var(--primary-color-dark);
 }
 
@@ -63,4 +68,5 @@ a:hover {
 
 .delete-btn:hover {
 	background-color: var(--delete-color-dark);
+	cursor: pointer;
 }

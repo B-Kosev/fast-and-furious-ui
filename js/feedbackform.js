@@ -1,6 +1,6 @@
-window.onload = function () {
-	document.getElementById("feedback-form").addEventListener("submit", formValidation.submitForm);
-};
+// window.onload = function () {
+// 	document.getElementById("feedback-form").addEventListener("submit", formValidation.submitForm);
+// };
 
 const formValidation = {
 	submitForm: (event) => {
@@ -13,25 +13,30 @@ const formValidation = {
 		const categoryValue = form.category.value;
 		const typeValue = form.type.value;
 		const textValue = form.text.value;
+		var success = true;
 
 		formValidation.clearErrorMessages();
 
 		if (nameValue.length == 0) {
 			formValidation.displayNameErrorMessage("Полето с имена е задължително.");
+			success = false;
 		} else if (nameValue.length < 6) {
 			formValidation.displayNameErrorMessage("Полето с имена трябва да съдържа поне 6 символа.");
+			success = false;
 		}
 
 		if (emailValue.length == 0) {
 			formValidation.displayEmailErrorMessage("Полето имейл е задължително.");
+			success = false;
 		}
 
 		if (textValue.length < 20) {
 			formValidation.displayTextErrorMessage("Полето с описание трябва да съдържа поне 20 символа.");
+			success = false;
 		}
 
-		if (response.success == true) {
-			window.location.replace("./index.html");
+		if (success == true) {
+			window.location.replace("./allfeedbacks.html");
 		}
 	},
 
@@ -98,3 +103,5 @@ const formValidation = {
 		text.setAttribute("style", "border: solid red");
 	},
 };
+
+document.getElementById("feedback-form").addEventListener("submit", formValidation.submitForm);
