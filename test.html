@@ -26,7 +26,16 @@
 					<li><button id="q1" class="btn question selected" type="button">1</button></li>
 					<li><button id="q2" class="btn question" type="button">2</button></li>
 					<li><button id="q3" class="btn question" type="button">3</button></li>
-					<li><button id="complete" class="btn complete" type="button">Приключване на опита</button></li>
+					<li>
+						<button
+							id="complete"
+							class="btn complete"
+							type="button"
+							title="Предаване на теста и приключване на опита. След натискането на бутона верните отговори ще бъдат показани."
+						>
+							Приключване на опита
+						</button>
+					</li>
 				</ul>
 			</section>
 			<section class="question">
@@ -35,7 +44,10 @@
 					<span class="question-number">Въпрос: 1</span>
 					<span class="question-points">Точки: 3</span>
 					<span class="question-correct">Верни: 1</span>
-					<button class="btn hint" type="button"><i class="fa-regular fa-lightbulb"></i></button>
+					<button class="btn hint" type="button" title="Получи подсказка">
+						<i class="fa-regular fa-lightbulb"></i>
+					</button>
+					<button class="btn bug" type="button" title="Докладвай проблем"><i class="fa-solid fa-bug"></i></button>
 				</section>
 				<h2 class="question-title">Тошко измамник ли е?</h2>
 				<img src="./images/logo.png" alt="" class="question-img" />
@@ -50,8 +62,8 @@
 			</section>
 			<section class="navigate">
 				<ul>
-					<button class="arrow left"><i class="fa-solid fa-arrow-left"></i></button>
-					<button class="arrow right"><i class="fa-solid fa-arrow-right"></i></button>
+					<button class="arrow left" title="Предишен въпрос"><i class="fa-solid fa-arrow-left"></i></button>
+					<button class="arrow right" title="Следващ въпрос"><i class="fa-solid fa-arrow-right"></i></button>
 				</ul>
 			</section>
 		</section>

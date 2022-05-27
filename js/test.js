@@ -192,3 +192,8 @@ document.getElementById("complete").addEventListener("click", function (e) {
 		document.getElementById("q3").click();
 	}
 });
+
+// Bug button
+document.querySelector(".btn.bug").addEventListener("click", function (e) {
+	window.location = "feedbackform.html";
+});
