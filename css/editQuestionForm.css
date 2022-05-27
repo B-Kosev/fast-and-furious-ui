@@ -1,0 +1,11 @@
+#myFile{
+    margin: 5px 0 0 0;
+    width:50%;
+}
+
+.wrong-image{
+    display:none;
+}
+.successMsg{
+    color:green;
+}
