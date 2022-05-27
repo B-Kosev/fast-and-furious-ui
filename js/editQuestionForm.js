@@ -24,44 +24,55 @@ function DisplayCorrectField(event){
 
 }
 
-
-
-
 const formValidation = {
 	submitForm: (event) => {
 		event.preventDefault();
         
 		const form = event.target;
-
-		const questionIDValue = form.questionID.value;
-
-		const typeValue = form.type.value;
-        const questionNumber=questinNumber.value;
-		const textValue = form.text.value;
-        const uploadedValue=form.filename.value;
+       
+        const typeValue = form.type.value;
+        const question1Value = form.question1.value;
+        const question2Value = form.question1.value;
+        const question3Value = form.question3.value;
+        const question4Value = form.question4.value;
+        const points = form.points.value;
+        const rightAnswer = form.rightanswer.value;
+        
         const successMsg=document.getElementById("success-msg");
 		var success = true;
         
         console.log(typeValue.localeCompare("Грешно изображение")==0);
 		formValidation.clearErrorMessages();
         if(typeValue.localeCompare("Грешен отговор")==0){
-
-        if(questionNumber!="1" && questionNumber!="2" && questionNumber!="3" && questionNumber!="4"){
-            formValidation.displayquestionNumberErrorMessage("Номера на въпроса трябва да е между 1-4.");
-			success = false;
-        }
-		if (questionIDValue.length == 0) {
-			formValidation.displayquestionIDErrorMessage("Полето с ID е задължително.");
-			success = false;
-		}
-
-
-		if (textValue.length < 10) {
-			formValidation.displayTextErrorMessage("Полето с описание трябва да съдържа поне 10 символа.");
-			success = false;
-		}
+            if (question1Value.length == 0) {
+                formValidation.question1err("Моля попълнете отговор на въпрос номер 1.","question1","question1-err");
+                success = false;
+            }
+            if (question2Value.length == 0) {
+                formValidation.question2err("Моля попълнете отговор на въпрос номер 2.","question1","question1-err");
+                success = false;
+            }
+            if (question3Value.length == 0) {
+                formValidation.question3err("Моля попълнете отговор на въпрос номер 3.","question1","question1-err");
+                success = false;
+            }
+            if (question4Value.length == 0) {
+                formValidation.question4err("Моля попълнете отговор на въпрос номер 4.","question1","question1-err");
+                success = false;
+            }
+            if (points.localeCompare('2')!=0 && points.localeCompare('3')!=0 && points.localeCompare('4')!=0 ) {
+                formValidation.pointserr("Точките трябва да са между 2-4.");
+                success = false;
+            }
+            
+            if (rightAnswer.localeCompare('1')!=0 &&rightAnswer.localeCompare('2')!=0 && rightAnswer.localeCompare('3')!=0 && rightAnswer.localeCompare('4')!=0 ) {
+                formValidation.rightanswererr("Номера на верния отговор трябва да е между 1-4");
+                success = false;
+            }
+               
         }
         else{
+            
             if(uploadedValue.length==0){
                 formValidation.displayuploadedErrorMessage("Моля качете снимка.");
                 success = false;
@@ -70,8 +81,10 @@ const formValidation = {
 
 		if (success == true) {
             successMsg.innerHTML="Успешно направихте промяната.";
+            successMsg.setAttribute("style", "display: block");
             
 		}else{
+            formValidation.clearSuccessMessage();
             if(typeValue.localeCompare("Грешен отговор")!=0){
                 const wrongQuestionElements=document.querySelectorAll('.wrong-question');
                 const wrongImageElements=document.querySelectorAll('.wrong-image');
@@ -84,73 +97,72 @@ const formValidation = {
 
             }
         }
-	},
-
-	clearErrorMessages: () => {
+	},clearSuccessMessage: () =>{
+        const success=document.getElementById("success-msg");
+        success.setAttribute("style", "display: none");
+    },
+    clearErrorMessages: () => {
 		
-		const text = document.getElementById("text");
-		const textErr = document.getElementById("text-err");
-        const questionIdErr=document.getElementById("questionID-err");
-        const questinNumberErr=document.getElementById("questinNumber-err");
-        const uploadErr=document.getElementById("fileUpload-err");
-        const questinNumber = document.getElementById("questinNumber");
-        const uploaded = document.getElementById("myFile");
-        const questionId = document.getElementById("questionID");
-
-        uploadErr.innerHTML = "";
-        questinNumberErr.innerHTML = "";
-        questionIdErr.innerHTML = "";
-        text.innerHTML = "";
-		textErr.innerHTML = "";
-
-		text.setAttribute("style", "border: groove #e4e9f7");
-        questinNumber.setAttribute("style", "border: groove #e4e9f7");
-        uploaded.setAttribute("style", "border: groove #e4e9f7");
-        questionId.setAttribute("style", "border: groove #e4e9f7");
+		const question1 = document.getElementById("question1");
+        const question2 = document.getElementById("question2");
+        const question3 = document.getElementById("question3");
+        const question4 = document.getElementById("question4");
+        const points = document.getElementById("points");
+        const rightAnswer = document.getElementById("rightanswer");
 
 
-		textErr.setAttribute("style", "display: none");
-        questionIdErr.setAttribute("style", "display: none");
-        questinNumberErr.setAttribute("style", "display: none");
+		question1.setAttribute("style", "border: groove #e4e9f7");
+        question2.setAttribute("style", "border: groove #e4e9f7");
+        question3.setAttribute("style", "border: groove #e4e9f7");
+        question4.setAttribute("style", "border: groove #e4e9f7");
+        points.setAttribute("style", "border: groove #e4e9f7");
+        rightAnswer.setAttribute("style", "border: groove #e4e9f7");
+
+        const question1err = document.getElementById("question1-err");
+        const question2err = document.getElementById("question2-err");
+        const question3err = document.getElementById("question3-err");
+        const question4err = document.getElementById("question4-err");
+        const pointserr = document.getElementById("points-err");
+        const rightAnswererr = document.getElementById("rightanswer-err");
+       
+
+        question1err.setAttribute("style", "display: none");
+        question2err.setAttribute("style", "display: none");
+        question3err.setAttribute("style", "display: none");
+        question4err.setAttribute("style", "display: none");
+        pointserr.setAttribute("style", "display: none");
+        rightAnswererr.setAttribute("style", "display: none");
+    
 		
+		
+	},question1err: (errorMessage,questionID,questionIDErr) => {
+		const question1 = document.getElementById(questionID);
+		const question1err = document.getElementById(questionIDErr);
+
+		question1err.innerHTML = errorMessage;
+		question1err.setAttribute("style", "display: block");
+
+		question1.setAttribute("style", "border: solid red");
 	},
-    displayuploadedErrorMessage: (errorMessage) => {
-		const uploaded = document.getElementById("myFile");
-		const uploadedErr = document.getElementById("fileUpload-err");
+    pointserr: (errorMessage) => {
+		const points = document.getElementById("points");
+		const pointsErr = document.getElementById("points-err");
 
-		uploadedErr.innerHTML = errorMessage;
-		uploadedErr.setAttribute("style", "display: block");
+		pointsErr.innerHTML = errorMessage;
+		pointsErr.setAttribute("style", "display: block");
 
-		uploaded.setAttribute("style", "border: solid red");
-	}
-    ,
-    displayquestionIDErrorMessage: (errorMessage) => {
-		const questionId = document.getElementById("questionID");
-		const questionIdErr = document.getElementById("questionID-err");
+		points.setAttribute("style", "border: solid red");
+	},rightanswererr: (errorMessage) => {
+		const rightAnswer = document.getElementById("rightanswer");
+		const rightAnswerErr = document.getElementById("rightanswer-err");
 
-		questionIdErr.innerHTML = errorMessage;
-		questionIdErr.setAttribute("style", "display: block");
+		rightAnswerErr.innerHTML = errorMessage;
+		rightAnswerErr.setAttribute("style", "display: block");
 
-		questionId.setAttribute("style", "border: solid red");
-	}
-    ,
-    displayTextErrorMessage: (errorMessage) => {
-		const text = document.getElementById("text");
-		const textErr = document.getElementById("text-err");
-
-		textErr.innerHTML = errorMessage;
-		textErr.setAttribute("style", "display: block");
-
-		text.setAttribute("style", "border: solid red");
-	},displayquestionNumberErrorMessage: (errorMessage) => {
-		const questinNumber = document.getElementById("questinNumber");
-		const questinNumberErr = document.getElementById("questinNumber-err");
-
-		questinNumberErr.innerHTML = errorMessage;
-		questinNumberErr.setAttribute("style", "display: block");
-
-		questinNumber.setAttribute("style", "border: solid red");
+		rightAnswer.setAttribute("style", "border: solid red");
 	},
-};
+    };
+
+
 
 document.getElementById("edit-question-form").addEventListener("submit", formValidation.submitForm);
