@@ -32,9 +32,10 @@ const formValidation = {
        
         const typeValue = form.type.value;
         const question1Value = form.question1.value;
-        const question2Value = form.question1.value;
+        const question2Value = form.question2.value;
         const question3Value = form.question3.value;
         const question4Value = form.question4.value;
+        const questionText = form.questiontext.value;
         const points = form.points.value;
         const rightAnswer = form.rightanswer.value;
         
@@ -45,19 +46,23 @@ const formValidation = {
 		formValidation.clearErrorMessages();
         if(typeValue.localeCompare("Грешен отговор")==0){
             if (question1Value.length == 0) {
-                formValidation.question1err("Моля попълнете отговор на въпрос номер 1.","question1","question1-err");
+                formValidation.questionerr("Моля попълнете отговор на въпрос номер 1.","question1","question1-err");
                 success = false;
             }
             if (question2Value.length == 0) {
-                formValidation.question2err("Моля попълнете отговор на въпрос номер 2.","question1","question1-err");
+                formValidation.questionerr("Моля попълнете отговор на въпрос номер 2.","question2","question2-err");
                 success = false;
             }
             if (question3Value.length == 0) {
-                formValidation.question3err("Моля попълнете отговор на въпрос номер 3.","question1","question1-err");
+                formValidation.questionerr("Моля попълнете отговор на въпрос номер 3.","question3","question3-err");
                 success = false;
             }
             if (question4Value.length == 0) {
-                formValidation.question4err("Моля попълнете отговор на въпрос номер 4.","question1","question1-err");
+                formValidation.questionerr("Моля попълнете отговор на въпрос номер 4.","question4","question4-err");
+                success = false;
+            }
+            if (questionText.length == 0) {
+                formValidation.questionerr("Моля попълнете отговор на въпрос номер 4.","questiontext","questiontext");
                 success = false;
             }
             if (points.localeCompare('2')!=0 && points.localeCompare('3')!=0 && points.localeCompare('4')!=0 ) {
@@ -135,7 +140,7 @@ const formValidation = {
     
 		
 		
-	},question1err: (errorMessage,questionID,questionIDErr) => {
+	},questionerr: (errorMessage,questionID,questionIDErr) => {
 		const question1 = document.getElementById(questionID);
 		const question1err = document.getElementById(questionIDErr);
 
