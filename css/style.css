@@ -261,3 +261,25 @@ video {
     border-radius: 15px;
     padding: 2%;
 }
+
+
+.btn{
+    outline: none;
+    margin: 10px 0 20px 0;
+    height: 40px;
+    width: 50%;
+    min-width: 170px;
+    text-align: center;
+    border-radius: 20px;
+    color: var(--text-color-light);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    transition: all, transform 0.5s ease;
+}
+
+.resultMsg{
+    font-size: 1.5rem;
+    color: green;
+}
