@@ -1,0 +1,36 @@
+#login-form{
+    width:30rem;
+    height:33rem;
+
+}
+
+#login-section{
+    display:flex;
+    justify-content: center;
+}
+#loginPassword, #loginName, #submitBtn, #errorMsg{
+    width:18rem;
+}
+
+#submitBtn{
+    margin-top:4rem;
+}
+#main-label{
+    margin-top:2rem;
+    margin-bottom:2rem;
+}
+
+.login-field{
+    color: var(--text-color);
+    width: 50%;
+    min-width: 170px;
+    height: 35px;
+    border-radius: 10px;
+    height: 15px;
+    margin: 15px 0 0 0;
+    width:18rem;
+}
+.errorMsg{
+    color:red;
+
+}
